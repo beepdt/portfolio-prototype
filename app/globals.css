@@ -19,8 +19,129 @@
   }
 }
 
+/* Webfont: Dirtyline36Daysoftype2022-Reg */
+@font-face {
+  font-family: "Dirtyline36Daysoftype2022";
+  src: url("/fonts/Dirtyline 36daysoftype 2022.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("/fonts/Dirtyline 36daysoftype 2022.woff") format("woff"),
+    /* Modern Browsers */ url("/fonts/Dirtyline 36daysoftype 2022.woff2")
+      format("woff2"),
+    /* Modern Browsers */ url("/fonts/Dirtyline 36daysoftype 2022.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Neutral Face Bold";
+  src: url("/fonts/NeutralFace-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neutral Face";
+  src: url("/fonts/NeutralFace.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: "Dirtyline36Daysoftype2022";
+}
+
+h2 {
+  font-family: "Neutral Face Bold";
+}
+
+p {
+  font-family: "Neutral Face";
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Neutral Face";
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  z-index: 99;
+  bottom: 16;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 8px;
+  min-height: 24px;
+}
+
+.nav-item {
+  padding: 12px;
+}
+
+.avatar {
+  padding: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* carousel styles*/
+
+.project-page {
+  display: flex;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+.project-page-title {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  height: 640px;
+  max-width: 480px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 999px) {
+  .project-page {
+    display: block;
+  }
+
+  .title-box {
+    max-width: 100%;
+    height: unset;
+  }
+
+  .project-page-title {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .title-box h1 {
+    font-size: 4rem;
+  }
+
+  .title-box p {
+    font-size: 12px;
+    --tw-tracking: var(--tracking-widest) /* 0.1em */;
+    letter-spacing: var(--tracking-widest); /* 0.1em */
+  }
+}
+
