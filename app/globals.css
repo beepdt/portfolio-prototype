@@ -80,6 +80,8 @@ body {
   transform: translate(-50%);
   padding: 8px;
   min-height: 24px;
+  color: white;
+  min-width: 30vw;
 }
 
 .nav-item {
@@ -142,6 +144,10 @@ a {
     font-size: 12px;
     --tw-tracking: var(--tracking-widest) /* 0.1em */;
     letter-spacing: var(--tracking-widest); /* 0.1em */
+  }
+
+  .navbar {
+    min-width: 90vw;
   }
 }
 

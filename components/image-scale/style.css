@@ -59,7 +59,7 @@
 .video-preview {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/8;
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: antiquewhite;
@@ -110,5 +110,9 @@ iframe {
   .video-container-mobile {
     display: flex;
     flex-direction: column;
+  }
+
+  .video-preview{
+    aspect-ratio: 5/4;
   }
 }

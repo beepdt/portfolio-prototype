@@ -1,0 +1,90 @@
+a {
+  text-decoration: none;
+}
+
+.menu-toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.menu-hamburger-icon {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+.menu-hamburger-icon span {
+  position: absolute;
+  width: 15px;
+  height: 1.25px;
+  transition: all 0.75s cubic-bezier(0.87, 0, 0.13, 1);
+  transform-origin: center;
+  will-change: transform;
+  background-color: wheat;
+}
+
+.menu-hamburger-icon span:nth-child(1) {
+  transform: translateY(-3px);
+}
+
+.menu-hamburger-icon span:nth-child(2) {
+  transform: translateY(3px);
+}
+
+.menu-hamburger-icon.active span:nth-child(1) {
+  transform: translateY(0) rotate(45deg) scale(1.05);
+}
+
+.menu-hamburger-icon.active span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg) scale(1.05);
+}
+
+.nav-menu-overlay,
+.menu-overlay-content {
+  border: 1px solid black;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 30vw;
+  min-height: 50svh;
+  z-index: 1;
+  overflow: hidden;
+  color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.nav-menu-overlay {
+  background-color: black;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  will-change: clip-path;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.menu-overlay-content {
+  will-change: transform;
+  pointer-events: all;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.menu-content-wrapper {
+  position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-menu-overlay,
+  .menu-overlay-content {
+    width: 90vw;
+  }
+}

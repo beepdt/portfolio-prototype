@@ -2,9 +2,10 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/nav/navbar";
 import ImageScale from "@/components/image-scale/image-scale";
 import TestComp from "@/components/test-comp/test";
+import CursorTrail from "@/components/cursor-trail/cursor-trail";
 
 
 export default function Home() {
